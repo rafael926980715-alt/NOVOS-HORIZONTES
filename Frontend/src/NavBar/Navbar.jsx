@@ -397,10 +397,11 @@ function Navbar() {
 
 
             {/* Modal Container - Responsivo e Confortável */}
-            <div className="relative w-full max-w-4xl max-h-[90vh] bg-white/10 backdrop-blur-xl rounded-3xl shadow-2xl overflow-hidden  overflow-x-hidden flex flex-col">
-              <div className="fixed inset-0 z-0">
+            <div className="relative w-full max-w-4xl max-h-[90vh] bg-white/90 backdrop-blur-2xl rounded-3xl shadow-2xl overflow-hidden  overflow-x-hidden flex flex-col">
+            
+              <div className="absolute inset-0 z-0 rounded-3xl overflow-hidden">
                 <img className="w-full h-full object-cover" src={papel} alt="Fundo" />
-                <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black/80"></div>
               </div>
 
 
@@ -413,7 +414,7 @@ function Navbar() {
               </button>
 
               {/* Header Fixo */}
-              <div className="bg-white/20 backdrop-blur-lg shadow-md px-6 py-5 flex-shrink-0">
+              <div className="bg-white/20  backdrop-blur-lg shadow-md px-6 py-5 flex-shrink-0">
                 <div className="flex items-center justify-between gap-4 mb-4">
                   <div className="flex items-center gap-4">
                     <div className="w-14 h-14 bg-gradient-to-br from-pink-500 to-purple-500 rounded-xl flex items-center justify-center relative">
@@ -498,7 +499,7 @@ function Navbar() {
               </div>
 
               {/* Scrollable Content */}
-              <div className="flex-1 overflow-y-auto p-6 space-y-4">
+              <div className="flex-1 overflow-y-auto p-6 space-y-4 z-50">
                 {filteredNotifications.length === 0 ? (
                   <div className="bg-white rounded-2xl shadow-md p-12 text-center">
                     <Bell className="w-16 h-16 text-gray-300 mx-auto mb-4" />
