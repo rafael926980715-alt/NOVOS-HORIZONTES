@@ -95,8 +95,6 @@ function Home() {
         </Swiper>
 
 
-        <div className='absolute top-[900px] bg-amber-950 z-100 text-9xl'>rhiuhierhihfi </div>
-
 
 
 
@@ -127,8 +125,6 @@ function Home() {
     
 
       </div>
-
-      <div className='absolute top-[900px] bg-amber-950 z-100 text-9xl'>rhiuhierhihfi </div>
     </section>
 
   )

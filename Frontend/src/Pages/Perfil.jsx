@@ -96,13 +96,13 @@ function PerfilSearch() {
 
                     {/* Search Section - Só aparece quando não tem perfil selecionado */}
                     {!selectedProfile && (
-                        <div className="bg-white rounded-[40px] shadow-2xl p-8 sm:p-12 mb-6">
-                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mono text-center mb-3">
+                        <div className="bg-black/30 backdrop-blur-md rounded-[40px] shadow-2xl p-8 sm:p-12 mb-6">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-sans text-center mb-3">
                                 <span className="text-pink-700">PESQUISAR MEU</span>{' '}
 
-                                <span className="text-gray-900">PERFIL</span>
+                                <span className="text-white font-sans">PERFIL</span>
                             </h1>
-                            <p className="text-center text-black font-semibold font-mono mb-8">
+                            <p className="text-center text-xl text-white font-sans font-semibold mb-8">
                                 Digite o seu nome de aluno para veres o teu perfil
                             </p>
 
@@ -115,7 +115,7 @@ function PerfilSearch() {
                                     value={searchName}
                                     onChange={(e) => setSearchName(e.target.value)}
                                     onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
-                                    className="w-full pl-16 pr-6 py-5 rounded-full  focus:outline-none text-lg font-semibold text-gray-900 placeholder:text-gray-400 shadow-lg "
+                                    className="w-full pl-16 pr-6 py-5 rounded-full  focus:outline-none text-lg font-semibold text-white placeholder:text-white shadow-lg "
                                 />
                                 <button
                                     onClick={handleSearch}
@@ -129,8 +129,8 @@ function PerfilSearch() {
                             {showResults && (
                                 <div className="mt-8 max-w-2xl mx-auto">
                                     {filteredStudents.length > 0 ? (
-                                        <div className="space-y-3">
-                                            <p className="text-sm font-bold text-black mb-4">
+                                        <div className="space-y-3 ">
+                                            <p className="text-sm font-bold text-white mb-4">
                                                 {filteredStudents.length} resultado(s) encontrado(s)
                                             </p>
 
@@ -138,7 +138,7 @@ function PerfilSearch() {
                                                 <button
                                                     key={student.id}
                                                     onClick={() => handleSelectProfile(student)}
-                                                    className="w-full rounded-full p-5 flex items-center gap-4 transition  shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70"
+                                                    className="w-full rounded-full p-5 flex items-center gap-4 transition  shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70 bg-black/5 backdrop-blur-md"
                                                 >
                                                     <img
                                                         src={student.photo}
@@ -146,8 +146,8 @@ function PerfilSearch() {
                                                         className="w-16 h-16 rounded-full object-cover shadow-lg"
                                                     />
                                                     <div className="text-left flex-1">
-                                                        <h3 className="text-lg font-bold font-mono text-pink-800">{student.name}</h3>
-                                                        <p className="text-sm font-semibold text-pink-800">{student.course}</p>
+                                                        <h3 className="text-lg font-bold font-mono text-white">{student.name}</h3>
+                                                        <p className="text-sm font-semibold text-white">{student.course}</p>
                                                     </div>
                                                     
                                                 </button>
@@ -156,10 +156,10 @@ function PerfilSearch() {
                                         </div>
                                     ) : (
                                         <div className="text-center py-12">
-                                            <p className="text-xl font-bold text-pink-800">
+                                            <p className="text-xl font-semibold font-sans text-white">
                                                 Nenhum aluno encontrado com esse nome
                                             </p>
-                                            <p className="text-sm text-pink-800 mt-2">
+                                            <p className="text-xl font-medium font-sans text-white mt-2">
                                                 Tente buscar por outro nome
                                             </p>
                                         </div>

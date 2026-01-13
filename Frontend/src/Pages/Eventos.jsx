@@ -138,7 +138,7 @@ function Eventos() {
                             <div className="w-full max-w-sm">
                                 <div className="relative w-full"> 
                                     <h2 className='text-white font-medium font-sans text-2xl flex justify-center pb-7'>Quantos viram</h2>
-                                    <div className=' w-full bg-amber-900 rounded-full font-medium font-sans flex items-center justify-center p-3'><h1 className='text-white text-center text-4xl font-medium font-sans rounded-full shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70'><CirclePlus size={50} /></h1><h1 className='text-white text-4xl text-center font-medium font-sans w-full'>1000kz</h1><h1 className='text-white text-center  text-4xl font-medium font-sans rounded-full shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70'><CircleMinus size={50}  /></h1></div>
+                                    <div className=' w-full bg-amber-900 rounded-full font-medium font-sans flex items-center justify-center p-1 shadow-lg '><h1 className='text-white text-center text-4xl font-medium font-sans rounded-full shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70'><CircleMinus size={50}  /> </h1><h1 className='text-white text-4xl text-center font-medium font-sans w-full'>1000kz</h1><h1 className='text-white text-center  text-4xl font-medium font-sans rounded-full shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70'><CirclePlus size={50} /></h1></div>
                                     
                                 </div>
                             </div>
