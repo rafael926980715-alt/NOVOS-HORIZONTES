@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { ArrowRight, MapPin, } from 'lucide-react'
 
 import tarefas from '../assets/gestaotarefas.webp'
-import ensino from '../assets/surprise.jpg'
+import ensino from '../assets/surprise.webp'
 import { MapPinHouse, PhoneOutgoing, MessageCircleMore  , Users  } from 'lucide-react'
 
 
