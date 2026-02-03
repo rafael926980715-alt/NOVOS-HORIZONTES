@@ -65,7 +65,7 @@ function Cursos() {
 
                         <div className='relative z-0 w-[100vw]  h-[60vh] lg:h-[50vh] flex justify-center items-center'><img src={ensino} className='object-cover w-full h-full rounded-b-4xl shadow-lg' />
 
-                            <div className='absolute bottom-0 flex justify-between items-center z-50  w-[100vw]'> <p className='text-white font-bold font-sans text-[20px] lg:text-5xl px-5'> Os Melhores Cursos Encontram-se Aqui No Polo 1 </p> </div>
+                            <div className='absolute bottom-0 flex justify-between items-center z-50  w-[100vw]'> <p className='text-gray-700 font-bold font-sans text-[20px] lg:text-5xl px-5'> Os Melhores Cursos Encontram-se Aqui No Polo 1 </p> </div>
                         </div>
 
 

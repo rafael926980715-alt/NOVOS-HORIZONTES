@@ -39,18 +39,18 @@ function Home() {
 
 
 
-          <div className=' flex  flex-col lg:flex-row  items-center  gap-4 w-[100vw] h-[100vh] lg:w-[70vw] lg:h-[70vh] lg:py-89 lg:px-6  lg:rounded-4xl  shadow-lg border border-white/20'>
+          <div className=' flex  flex-col lg:flex-row  items-center  gap-4 lg:gap-14 w-[100vw] h-[100vh] lg:w-[80vw] lg:h-[70vh] lg:py-89 lg:px-6  lg:rounded-4xl  shadow-lg border border-white/20'>
 
 
 
 
             <div className='relative z-0 lg:w-[35vw] lg:h-[70vh] w-[100vw] h-[60vh]  flex justify-center items-center'><img src={polo} className='object-cover w-full h-full lg:rounded-4xl rounded-b-4xl shadow-lg border border-white/20' />
 
-              <div className='absolute bottom-7 flex justify-between items-center z-50  w-[70vw]  lg:w-[20vw]  rounded-full gap-10 backdrop-blur-md  p-1'> <h1 className='text-white  py-2 rounded-full font-bold font-sans w-full text-center v cursor-pointer duration-700 ease-in-out active:scale-70 shadow-lg bg-black/10 backdrop-blur-md'>POLO 1</h1> <h1 className='text-white  py-2 rounded-full font-bold font-sans w-full text-center cursor-pointer bg-black/10 backdrop-blur-md duration-700 ease-in-out active:scale-70 shadow-lg'>POLO 2</h1> </div>
+              <div className='absolute bottom-7 flex justify-between items-center z-50  w-[70vw]  lg:w-[20vw]  rounded-full gap-10 backdrop-blur-md  p-1 border border-white/20'> <h1 className='text-white  py-2 rounded-full font-bold font-sans w-full text-center v cursor-pointer duration-700 ease-in-out active:scale-70 shadow-lg bg-black/10 backdrop-blur-md border border-white/20'>POLO 1</h1> <h1 className='text-white  py-2 rounded-full font-bold font-sans w-full text-center cursor-pointer bg-black/10 backdrop-blur-md duration-700 ease-in-out active:scale-70 shadow-lg border border-white/20'>POLO 2</h1> </div>
             </div>
 
 
-            <div className='relative  lg:w-[39vw] lg:h-[70vh]  w-[100vw] h-[100vh] rounded-4xl overflow-hidden overflow-y-auto scroll-pink'>
+            <div className='relative  lg:w-[39vw] lg:h-[70vh]  w-[100vw] h-[100vh] rounded-4xl overflow-hidden overflow-y-auto scroll-pink lg:px-9'>
 
 
               <div className="flex flex-col gap-9">
@@ -108,9 +108,9 @@ function Home() {
                           <div className=" lg:rounded-t-3xl flex items-center justify-center">
                             <button
                               onClick={() => setIsLoginOpen(false)}
-                              className="lg:hidden bg-black/10 backdrop-blur-md px-6 py-3 w-full h-10 shadow-lg rounded-full flex items-center justify-center duration-700 ease-in-out active:scale-70"
+                              className="lg:hidden backdrop-blur-md px-6 py-3 border border-white/20 w-full h-10 shadow-lg rounded-full flex items-center justify-center duration-700 ease-in-out active:scale-70"
                             >
-                              <h1 className='text-white font-semibold font-sans flex gap-3'> <ArrowLeft className='text-white' /> VOLTAR</h1>
+                              <h1 className='text-gray-700 font-semibold font-sans flex gap-3'> <ArrowLeft className='text-gray-700' /> VOLTAR</h1>
                             </button>
 
 

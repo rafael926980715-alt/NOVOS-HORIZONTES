@@ -11,18 +11,18 @@
 
 
 .scroll-pink::-webkit-scrollbar {
-  width: 3px;
-  height: 2px;
+  width: 7px;
+  height: 1px;
 }
 
 .scroll-pink::-webkit-scrollbar-track {
   background:transparent;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 .scroll-pink::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #6e563a, #856c4d);
-  border-radius: 20%;
+  border-radius: 20px;
   
 }
 

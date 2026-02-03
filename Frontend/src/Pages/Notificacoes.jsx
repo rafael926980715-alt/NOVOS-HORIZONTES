@@ -5,18 +5,33 @@ import { ArrowRight, MapPin, } from 'lucide-react'
 
 import tarefas from '../assets/gestaotarefas.webp'
 import ensino from '../assets/surprise.webp'
-import { MapPinHouse, PhoneOutgoing, MessageCircleMore  , Users  } from 'lucide-react'
+import { MapPinHouse, PhoneOutgoing, MessageCircleMore  , Users ,Trash2  } from 'lucide-react'
 
 
 
 
-const ItemCard = ({ title, price}) => (
+const ItemCard = ({ title  , price}) => (
 
-    <div className='relative rounded-4xl w-full h-40 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'> 
+    <div className='relative rounded-4xl w-full flex-col h-24 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'> 
 
-    <h1 className='text-white text-xl font-semibold font-sans'>
+
+   <span className=' flex pt-1 justify-center  rounded-full px-4'>
+    <h1 className='text-white uppercase text-center text-xl font-semibold font-sans w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
         {title}
     </h1>
+
+    </span> 
+
+    <div className='relative top-4 w-full flex justify-between px-9'>
+     <h1 className='text-white text-center text-xl font-semibold font-sans uppercase bg-black/10  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
+       ha 3 mim
+    </h1>
+
+   <span className=' pt-1  bg-black/10  backdrop-blur-md border border-white/20 rounded-full px-4 cursor-pointer  duration-700 ease-in-out active:scale-70'><Trash2 className='text-white text-xl font-semibold font-sans uppercase' /></span> 
+    
+    </div>
+
+    
 
 
 
@@ -35,10 +50,10 @@ function Notificacions() {
 
 
     const todosCursos = [
-        { id: 1, titulo: "Informática de Gestão", cat: "Técnico Polo ||", preco: "15.000", img: tarefas },
-        { id: 2, titulo: "Contabilidade", cat: "Administração Polo |", preco: "12.500", img: tarefas },
-        { id: 3, titulo: "Recursos Humanos", cat: "Gestão Polo |", preco: "12.500", img: tarefas },
-        { id: 4, titulo: "Eletricidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
+        { id: 1, titulo: "Informática de Gestão Informática de Gestão", cat: "Técnico Polo ||", preco: "15.000", img: tarefas },
+        { id: 2, titulo: "Contabilidade Contabilidade", cat: "Administração Polo |", preco: "12.500", img: tarefas },
+        { id: 3, titulo: "Recursos Humanos Contabilidade", cat: "Gestão Polo |", preco: "12.500", img: tarefas },
+        { id: 4, titulo: "Eletricidade Contabilidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
     ]
 
 

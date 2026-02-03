@@ -1,85 +1,24 @@
 import '../index.css'
 
 import React, { useState } from 'react'
-import { Search, Award, Calendar, MoveRight, X, Bell, User, Lock, Mail, UserSearch } from 'lucide-react'
+import { Award, Calendar,ArrowRight, MapPinHouse, PhoneOutgoing, MessageCircleMore, Bell, User, X, Lock, Mail, MapPinPen, PenLine, AudioLines, SendHorizontal, Megaphone, ArrowLeft } from 'lucide-react'
+
 import { Link } from 'react-router-dom'
 
 
 
 function PerfilSearch() {
 
-    const [searchName, setSearchName] = useState('')
-    const [selectedProfile, setSelectedProfile] = useState(null)
-    const [showResults, setShowResults] = useState(false)
+
+    
 
 
 
     // Dados de exemplo dos alunos
-    const students = [
-        {
-            id: 1,
-            name: 'João Silva',
-            course: 'Informática de Gestão',
-            turno: 'noite',
-            photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-            calender: '10/03/2026',
-            sale: 'pago',
-            turma: 'infor3'
+    const students =  0
 
 
-        },
-        {
-            id: 2,
-            name: 'Maria Santos',
-            course: 'Técnico de Saúde',
-            turno: 'tarde',
-            photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop',
-            calender: '10/03/2026',
-            sale: 'pago',
-            turma: 'infor5',
-        },
-        {
-            id: 3,
-            name: 'Pedro Costa',
-            course: 'Contabilidade e Gestão',
-            turno: 'tarde',
-            photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
-            calender: '10/03/2026',
-            sale: 'pendente',
-            turma: 'infor3',
-        },
-        {
-            id: 4,
-            name: 'Ana Ferreira',
-            course: 'Enfermagem',
-            turno: 'manha',
-            photo: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop',
-            calender: '10/03/2026',
-            sale: 'pago',
-            turma: 'infortec3',
-        }
-    ];
-
-    // Filtrar alunos por nome
-    const filteredStudents = students.filter(student =>
-        student.name.toLowerCase().includes(searchName.toLowerCase())
-    )
-
-    const handleSearch = () => {
-        if (searchName.trim()) {
-            setShowResults(true)
-        }
-    }
-
-    const handleSelectProfile = (student) => {
-        setSelectedProfile(student)
-        setShowResults(false)
-    }
-
-    const handleCloseProfile = () => {
-        setSelectedProfile(null)
-        setSearchName('')
-    }
+ 
 
     return (
 
@@ -96,25 +35,18 @@ function PerfilSearch() {
                 
 
                         {/* Profile Display - Só aparece quando um perfil é selecionado */}
-                        {selectedProfile && (
+                        { students ? (
                             <div className="fixed inset-0 h-full w-full  lg:w-full lg:h-full  flex items-center justify-center">
 
                                 <div
                                     className="fixed inset-0 w-ful bg-black/50 backdrop-blur-sm"
-                                    onClick={handleCloseProfile}
+                                    
                                 ></div>
 
 
 
 
-                                {/* Close Button */}
-                                <button
-                                    onClick={handleCloseProfile}
-                                    className="absolute -top-4 -right-4 z-50 w-14 h-14 bg-pink-800 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition"
-                                >
-                                    <X className="text-white" size={28} />
-                                </button>
-
+                            
                                 {/* Profile Card */}
                                 <div className=" h-full bg-white w-[100vw] shadow-2xl relative lg:h-auto lg:w-[750px] lg:rounded-4xl overflow-hidden">
 
@@ -141,7 +73,7 @@ function PerfilSearch() {
                                             {/* Profile Image Container */}
                                             <div className="w-full h-full rounded-full bg-gradient-to-b from-pink-900 to-pink-900 shadow-lg overflow-hidden  relative">
                                                 <img
-                                                    src={selectedProfile.photo}
+                                                    src={students.photo}
 
                                                     className="w-full h-full object-cover"
                                                 />
@@ -156,10 +88,10 @@ function PerfilSearch() {
 
                                         {/* User Info */}
                                         <div className="text-center mt-5">
-                                            <h3 className="text-2xl font-bold font-mono text-pink-800">{selectedProfile.name}</h3>
-                                            <p className=" font-semibold font-mono text-pink-800 mt-1 text-lg uppercase">{selectedProfile.course}</p>
-                                            <p className="font-bold font-mono text-pink-800 text-2xl mt-2 uppercase">Turno:{selectedProfile.turno}</p>
-                                            <p className="font-bold font-mono text-pink-800 text-2xl mt-2 uppercase">Turma:{selectedProfile.turma}</p>
+                                            <h3 className="text-2xl font-bold font-mono text-pink-800">{students.name}</h3>
+                                            <p className=" font-semibold font-mono text-pink-800 mt-1 text-lg uppercase">{students.course}</p>
+                                            <p className="font-bold font-mono text-pink-800 text-2xl mt-2 uppercase">Turno:{students.turno}</p>
+                                            <p className="font-bold font-mono text-pink-800 text-2xl mt-2 uppercase">Turma:{students.turma}</p>
 
                                         </div>
 
@@ -169,10 +101,10 @@ function PerfilSearch() {
                                             <div className="bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 shadow-lg">
                                                 <Calendar className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-pink-50 flex-shrink-0" />
                                                 <p className="text-lg sm:text-xl lg:text-2xl font-bold text-amber-50 whitespace-nowrap w-full">
-                                                    {selectedProfile.calender}
+                                                    {students.calender}
                                                 </p>
                                                 <p className="text-lg sm:text-lg lg:text-2xl font-bold text-pink-50 uppercase whitespace-nowrap w-full">
-                                                    {selectedProfile.sale}
+                                                    {students.sale}
                                                 </p>
                                             </div>
 
@@ -183,6 +115,186 @@ function PerfilSearch() {
                                     </div>
                                 </div>
                             </div>
+
+                        ):(
+
+                            <div className="fixed inset-0 lg:relative lg:inset-0 flex items-center justify-center">
+                            
+                            
+                                                  {/* Modal Container - Fullscreen em mobile, card em desktop */}
+                                                  <div className="lg:relative fixed inset-0 overflow-y-auto scroll-pink ">
+                            
+                            
+                            
+                                                    <div className='flex flex-col justify-center items-center gap-10 h-full pt-2 pb-32 lg:pb-7 lg:rounded-4xl'>
+                            
+                                                      <div className=" lg:rounded-t-3xl flex items-center justify-center">
+                                                 
+                            
+                            
+                                                      </div>
+                            
+                            
+                            
+                            
+                            
+                                                      <div className='grid grid-cols-2 justify-center items-center gap-5  w-full'>
+                            
+                            
+                                                        <div className='relative'>
+                                                          <User className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-pink-50" size={20} />
+                                                          <input type="text" name="" id="" placeholder='Nome'
+                                                             onFocus={() => {
+                                                              
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                            className='w-full bg-pink-950 backdrop-blur-md text-white
+                                                           placeholder:text-white px-12 py-3 rounded-4xl
+                                                          font-semibold text-xl
+                                                                focus:outline-none transition shadow-lg' />
+                                                        </div>
+                            
+                            
+                                                        <div className='relative'>
+                                                          <PhoneOutgoing className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-pink-50" size={20} />
+                                                          <input type="tel" name="" id="" placeholder='Telefone'
+                                                          inputMode='numeric'
+                                                          autoComplete='off'
+                                                           onFocus={() => {
+                                                              
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                          className='w-full bg-pink-950 backdrop-blur-md text-white
+                                                   placeholder:text-white px-12 py-3 rounded-4xl font-semibold text-xl focus:outline-none
+                                                    transition shadow-lg' />
+                                                        </div>
+                            
+                            
+                            
+                            
+                            
+                                                        <div className='relative'>
+                                                          <Mail className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-pink-50" size={20} />
+                                                          <input type="email" name="" id="" placeholder='Email'
+                                                           onFocus={() => {
+                                                    
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                            className='w-full bg-pink-950 backdrop-blur-md text-white
+                                                      placeholder:text-white px-12 py-3 rounded-4xl 
+                                                      font-semibold text-xl focus:outline-none
+                                                       transition shadow-lg' />
+                            
+                            
+                                                        </div>
+                            
+                            
+                                                        <div className='relative'>
+                                                          <MapPinPen className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-pink-50" size={20} />
+                                                          <input type="text" name="" id="" placeholder='Polo' 
+                                                           onFocus={() => {
+                                                              
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                          className='w-full bg-pink-950 backdrop-blur-md text-white
+                                                   placeholder:text-white px-12 py-3 rounded-4xl
+                                                    font-semibold text-xl 
+                                                   focus:outline-none transition shadow-lg' />
+                                                        </div>
+                            
+                                                      </div>
+                            
+                            
+                            
+                                                      <div className='flex flex-col justify-center items-center gap-7'>
+                            
+                            
+                                                        <div className='relative'>
+                                                          <AudioLines className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-pink-50" size={20} />
+                                                          <input type="text" name="" id="" placeholder='Titulo Do Assunto' 
+                                                           onFocus={() => {
+                                                              
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                          className='w-full bg-pink-950 backdrop-blur-md text-white
+                                                   placeholder:text-white px-12 py-3 rounded-4xl
+                                                    font-semibold text-xl
+                                                   focus:outline-none transition shadow-lg' />
+                                                        </div>
+                            
+                            
+                            
+                            
+                                                        <div className='relative flex-col gap-4 flex justify-center items-center'>
+                            
+                                                          <textarea name="text" id="" placeholder='Descreva O Assunto...' 
+                                                           onFocus={() => {
+                                                              
+                                                              setTimeout(() => {
+                                                                window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })
+                                                              }, 300)
+                                                            }}
+                                                          className='resize-y lg:w-[30vw] lg:h-[30vh] w-[90vw] h-[20vh] sm:h-[20vh]  scroll-pink bg-pink-950 backdrop-blur-md text-white
+                                                   placeholder:text-white px-3 py-2 rounded-xl
+                                                    font-semibold text-xl
+                                                   focus:outline-none transition shadow-lg'></textarea>
+                            
+                            
+                                                          <button
+                            
+                                                            className="flex gap-2 justify-center items-center  bg-pink-950 backdrop-blur-md text-white px-10 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70"
+                                                          >
+                                                            <SendHorizontal size={25} className="sm:w-5 sm:h-5" />
+                                                            <span className="font-sans font-semibold">ENVIAR</span>
+                            
+                                                          </button>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                                        </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                                      </div>
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                                                    </div>
+                            
+                            
+                                                  </div>
+                                                </div>
 
                         )}
                     </div>

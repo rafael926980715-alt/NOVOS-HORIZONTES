@@ -46,7 +46,7 @@ function Navbar() {
              
 
 
-            <Link to='/perfilsearch' className=" flex gap-2 items-center bg-black/10  backdrop-blur-md text-gray-700 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70">
+            <Link to='/perfilsearch' className=" flex gap-2 items-center bg-black/10  backdrop-blur-md border border-white/20 text-gray-700 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70">
               <User size={25} className="sm:w-5 sm:h-5" />
               <span className="font-sans font-semibold ">PERFIL</span>
             </Link>
@@ -69,7 +69,7 @@ function Navbar() {
             {/* NOTIFICAÇÕES Button */}
             <Link 
               to='/notificacions'
-              className="flex gap-2 items-center bg-black/10  backdrop-blur-md text-gray-700 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg relative cursor-pointer duration-700 ease-in-out active:scale-70">
+              className="flex gap-2 items-center bg-black/10 border border-white/20 backdrop-blur-md text-gray-700 px-4 sm:px-5 lg:px-6 py-2 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg relative cursor-pointer duration-700 ease-in-out active:scale-70">
               <Bell size={25} className="sm:w-5 sm:h-5" />
               <span className="font-sans font-semibold ">NOTIFICAÇÕES</span>
     
