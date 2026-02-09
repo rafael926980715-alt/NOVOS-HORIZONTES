@@ -5,39 +5,44 @@ import { ArrowRight, MapPin, } from 'lucide-react'
 
 import tarefas from '../assets/gestaotarefas.webp'
 import ensino from '../assets/surprise.webp'
-import { MapPinHouse, PhoneOutgoing, MessageCircleMore  , Users ,Trash2  } from 'lucide-react'
+import { MapPinHouse, PhoneOutgoing, MessageCircleMore, Users, Trash2 } from 'lucide-react'
 
 
 
 
-const ItemCard = ({ title  , price}) => (
+const ItemCard = ({ title, price }) => (
 
-    <div className='relative rounded-4xl w-full flex-col h-24 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'> 
+    <div className='relative rounded-4xl w-full text-gray-700 flex-col h-23 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'>
 
 
-   <span className=' flex pt-1 justify-center  rounded-full px-4'>
-    <h1 className='text-white uppercase text-center text-xl font-semibold font-sans w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
-        {title}
-    </h1>
+        <span className=' flex pt-1 justify-center  rounded-full px-4'>
+            <h1 className=' uppercase text-center text-xl font-bold font-mono w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                {title}
+            </h1>
 
-    </span> 
+        </span>
 
-    <div className='relative top-4 w-full flex justify-between px-9'>
-     <h1 className='text-white text-center text-xl font-semibold font-sans uppercase bg-black/10  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
-       ha 3 mim
-    </h1>
 
-   <span className=' pt-1  bg-black/10  backdrop-blur-md border border-white/20 rounded-full px-4 cursor-pointer  duration-700 ease-in-out active:scale-70'><Trash2 className='text-white text-xl font-semibold font-sans uppercase' /></span> 
-    
+
+        <div className='relative top-3 w-full flex justify-between gap-2 px-2'>
+            <h1 className='text-center text-lg font-semibold font-mono uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                ha 3 mim
+            </h1>
+            <h1 className=' text-center text-lg font-semibold font-mono uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                polo 1
+            </h1>
+
+            <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70'><Trash2 className=' text-xl font-semibold font-mono uppercase' /></span>
+
+        </div>
+
+
+
+
+
+
     </div>
 
-    
-
-
-
-
-    </div>
-   
 )
 
 
@@ -82,30 +87,30 @@ function Notificacions() {
 
 
                     <div className='relative z-0 w-[100vw]  h-[60vh] lg:h-[50vh] flex justify-center items-center'>
-                        
+
                         <img src={ensino} className='object-cover w-full h-full rounded-b-4xl shadow-lg border border-white/20' />
 
-                        <div className='absolute bottom-0 flex justify-between items-center z-50  w-[100vw]'>  
-                            
-                            
+                        <div className='absolute bottom-0 flex justify-between items-center z-50  w-[100vw]'>
+
+
                             <div className="flex gap-3 overflow-x-auto pb-3 lg:pb-7 pl-2 lg:pl-9 no-scrollbar">
 
-                               
-                            </div>  
-                            
-                            
-                            
-                            
-                            </div>     
-                        
-                        
+
+                            </div>
+
+
+
+
                         </div>
+
+
+                    </div>
 
 
                     <div className='relative w-[100vw] h-[100vh] overflow-hidden overflow-y-auto scroll-pink'>
 
 
-                        <div className="flex flex-col gap-4 lg:grid md:grid md:grid-cols-3 lg:grid-cols-4 pt-2 pb-2">
+                        <div className="flex flex-col gap-7 lg:grid md:grid md:grid-cols-3 lg:grid-cols-4 pt-2 pb-2">
 
 
 
