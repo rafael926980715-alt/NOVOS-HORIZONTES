@@ -3,6 +3,7 @@ import '../index.css'
 import React, { useState } from 'react'
 import { Award, Calendar, ArrowRight, MapPinHouse, PhoneOutgoing, MessageCircleMore, Bell, User, X, Lock, Mail, MapPinPen, PenLine, AudioLines, SendHorizontal, Megaphone, ArrowLeft } from 'lucide-react'
 
+import tarefas from '../assets/gestaotarefas.webp'
 import { Link } from 'react-router-dom'
 import loopone from '../assets/Cha.png'
 
@@ -15,9 +16,8 @@ function PerfilSearch() {
 
 
 
- 
-  const students = 0
 
+  const students = 0
 
 
   return (
@@ -54,16 +54,19 @@ function PerfilSearch() {
                       <br />
                       <span className="text-pink-700 font-bold font-mono">DO</span>
                     </h1>
-                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono">
-                      AMANHA
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono uppercase text-gray-700">
+                      {students.polo}
                     </h2>
 
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono uppercase text-pink-800">
+                      {students.polo}
+                    </h2>
 
-                    <button className="mt-8 bg-white text-black px-8 py-4 rounded-full font-black text-sm tracking-wider hover:scale-105 transition-transform shadow-lg">
-                      PERFIL DO ALUNO
-                    </button>
+                    <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-mono uppercase text-pink-800">
+                      polo
+                    </h2>
+
                   </div>
-
                   {/* Profile Image Section */}
                   <div className="relative -mt-32 px-8 pb-8">
                     <div className="relative mx-auto w-64 h-64 sm:w-72 sm:h-72">
@@ -93,21 +96,25 @@ function PerfilSearch() {
                     </div>
 
                     {/* Stats Cards */}
+                    
+                      <div className="flex items-center justify-center flex-col gap-3 mt-1">
+                        {students.sale == 'pago' ? (
+                        <div className="bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 shadow-lg">
+                          <Calendar className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-pink-50 flex-shrink-0" />
+                          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-amber-50 whitespace-nowrap w-full">
+                            {students.calender}
+                          </p>
+                          <p className="text-lg sm:text-lg lg:text-2xl font-bold text-pink-50 uppercase whitespace-nowrap w-full">
+                            {students.sale}
+                          </p>
+                        </div>
+                        ):(
+                          <></>
+                        )}
 
-                    <div className="flex items-center justify-center flex-col gap-3 mt-1">
-                      <div className="bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 shadow-lg">
-                        <Calendar className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-pink-50 flex-shrink-0" />
-                        <p className="text-lg sm:text-xl lg:text-2xl font-bold text-amber-50 whitespace-nowrap w-full">
-                          {students.calender}
-                        </p>
-                        <p className="text-lg sm:text-lg lg:text-2xl font-bold text-pink-50 uppercase whitespace-nowrap w-full">
-                          {students.sale}
-                        </p>
                       </div>
 
-                    </div>
-
-
+             
 
                   </div>
                 </div>
@@ -122,27 +129,15 @@ function PerfilSearch() {
                   <div className='fixed inset-0 z-0 pt-3 border-none'>
                     <img src={loopone} className='border-none' />
                   </div>
-                  
-                  
+
+
                 </div>
-
-
                 {/* Modal Container - Fullscreen em mobile, card em desktop */}
                 <div className="relative overflow-y-auto scroll-pink pt-30">
 
-
-
-
-
                   <div className='flex flex-col justify-center items-center gap-9 h-full lg:rounded-4xl '>
 
-                
-
-
-
-
-
-                    <div className='flex flex-col justify-center items-center gap-5 lg:w-full lg:h-full  w-full h-[50vh] shadow-lg '>
+                    <div className='flex flex-col justify-center items-center gap-5 lg:w-full lg:h-full  w-full h-full shadow-lg '>
 
 
                       <div className='relative'>

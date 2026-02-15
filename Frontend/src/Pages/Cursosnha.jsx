@@ -25,7 +25,7 @@ import 'swiper/css/autoplay'
 
 
 
-const ItemCard = ({ title }) => (
+const ItemCardNH = ({ title }) => (
     <Link
         to='/Inscricaonh'
         className='relative rounded-4xl audiowide-regular w-full text-gray-700 flex-col  h-45 lg:h-35 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'>
@@ -45,15 +45,14 @@ const ItemCard = ({ title }) => (
             <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full '>
                 turno: tarde
             </h1>
-            </div>
-            <div className='relative top-5  gap-2 px-3 flex justify-between lg:grid lg:grid-cols-2'>
-                <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
-                    11: classe
-                </h1>
+        </div>
+        <div className='relative top-5  gap-2 px-3 flex justify-between lg:grid lg:grid-cols-2'>
+            <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
+                11: classe
+            </h1>
 
-                <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 text-lg shadow-lg font-semibold text-center uppercase w-full'>sala: 12</span>
-            </div>
-        
+            <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 text-lg shadow-lg font-semibold text-center uppercase w-full'>sala: 12</span>
+        </div>
 
 
 
@@ -64,7 +63,7 @@ const ItemCard = ({ title }) => (
 
 
 
-function Cursos() {
+function CursosNh() {
 
 
     const todosCursos = [
@@ -72,6 +71,8 @@ function Cursos() {
         { id: 2, titulo: "Contabilidade", cat: "Administração Polo |", preco: "12.500", img: tarefas },
         { id: 3, titulo: "Recursos Humanos", cat: "Gestão Polo |", preco: "12.500", img: tarefas },
         { id: 4, titulo: "Eletricidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
+        { id: 4, titulo: "Eletricidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
+
     ]
 
 
@@ -147,7 +148,7 @@ function Cursos() {
 
                             {
                                 todosCursos.map((curso) => (
-                                    <ItemCard
+                                    <ItemCardNH
                                         key={curso.id}
                                         title={curso.titulo}
                                         price={curso.preco}
@@ -192,4 +193,4 @@ function Cursos() {
     )
 }
 
-export default Cursos
+export default CursosNh

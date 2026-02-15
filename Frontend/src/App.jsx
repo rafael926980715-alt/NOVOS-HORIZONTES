@@ -4,8 +4,8 @@ import Home from './Pages/Home'
 import Cursos from './Pages/Cursos'
 import PerfilSearch from './Pages/Perfil'
 import Notificacions from './Pages/Notificacoes'
-
-
+import InscricaoNH from './Pages/Inscricao'
+import CursosNh from './Pages/Cursosnha'
 
 
 
@@ -26,7 +26,11 @@ function App() {
         <Route path='/cursos' element={<Cursos/>}/>
         <Route path='/perfilsearch' element={<PerfilSearch/>}/>
         <Route path='/notificacions' element={<Notificacions/>}/>
-     
+        <Route path='/Inscricaonh' element={<InscricaoNH/>}/>
+        <Route path='/Cursonh' element={<CursosNh/>}/>
+
+
+        
 
         
 

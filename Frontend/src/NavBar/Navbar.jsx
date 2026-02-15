@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Megaphone , Grid2x2Check , GraduationCap, Bell, User, X, Lock, Mail, UserSearch, PartyPopper } from 'lucide-react'
+import { Bell, User } from 'lucide-react'
 import '../index.css'
 import '../App.css'
 import loopone from '../assets/Cha.png'
@@ -27,10 +27,10 @@ function Navbar() {
         
 
           {/* LOGO - Always visible */}
-          <Link to='/' className="lg:w-[10vw] lg:shadow-lg rounded-full cursor-pointer flex justify-center items-center  duration-700 ease-in-out active:scale-70 lg:border lg:border-white/20 lg:backdrop-blur-md rounded-full">
+          <Link to='/' className="lg:w-[10vw] lg:shadow-lg rounded-full lg:hover:scale-95 cursor-pointer flex justify-center items-center  duration-700 ease-in-out active:scale-70 lg:border lg:border-white/20 lg:backdrop-blur-md rounded-full">
             <div className="sm:w-40 sm:h-12 w-[20vw] rounded-full">
             
-                <img className=' h-full w-full object-cover' src={loopone} width={900} />
+                <img className=' h-full w-full object-cover' src={loopone} width={900}  title='HOME'/>
             
             </div>
    
@@ -45,7 +45,7 @@ function Navbar() {
              
 
 
-            <Link to='/perfilsearch' className=" flex gap-2 items-center    border border-white/20 text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70">
+            <Link to='/perfilsearch' className=" flex gap-2 items-center lg:hover:scale-95   border border-white/20 text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70" title='PERFIL'>
               <User size={25} className="sm:w-5 sm:h-5" />
               <span className="font-sans font-semibold hidden sm:inline">PERFIL</span>
             </Link>
@@ -67,8 +67,9 @@ function Navbar() {
 
             {/* NOTIFICAÇÕES Button */}
             <Link 
+            title='NOTIFICACOES'
               to='/notificacions'
-              className="flex gap-2 items-center  border border-white/20  text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg relative cursor-pointer duration-700 ease-in-out active:scale-70">
+              className="flex gap-2 items-center  border border-white/20 lg:hover:scale-95 text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg relative cursor-pointer duration-700 ease-in-out active:scale-70">
               <Bell size={25} className="sm:w-5 sm:h-5" />
               <span className="font-sans font-semibold hidden sm:inline">NOTIFICAÇÕES</span>
     

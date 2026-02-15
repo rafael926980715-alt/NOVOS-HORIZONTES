@@ -54,11 +54,14 @@ function Notificacions() {
     const [isLoginOpen, setIsLoginOpen] = useState(false)
 
 
-    const todosCursos = [
-        { id: 1, titulo: "Informática de Gestão Informática de Gestão", cat: "Técnico Polo ||", preco: "15.000", img: tarefas },
-        { id: 2, titulo: "Contabilidade Contabilidade", cat: "Administração Polo |", preco: "12.500", img: tarefas },
-        { id: 3, titulo: "Recursos Humanos Contabilidade", cat: "Gestão Polo |", preco: "12.500", img: tarefas },
-        { id: 4, titulo: "Eletricidade Contabilidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
+    const todosCursos =  [
+        { id: 1, titulo: "Informática de Gestão Informática de Gestão", preco: "15.000", img: tarefas , type:'Dowload' },
+        { id: 2, titulo: "Contabilidade Contabilidade",preco: "12.500", type:'Boletom'  },
+        { id: 3, titulo: "Recursos Humanos Contabilidade", preco: "12.500", type:'Message'  },
+        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", img: tarefas , type:'Event'},
+        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", type:'Event'}
+
+
     ]
 
 
@@ -114,7 +117,9 @@ function Notificacions() {
 
 
 
-                            {
+
+
+                            {todosCursos.length > 0 ? (
                                 todosCursos.map((curso) => (
                                     <ItemCard
                                         key={curso.id}
@@ -124,6 +129,14 @@ function Notificacions() {
                                         bgColor={curso.cor}
                                     />
                                 ))
+                            ) : (
+                                <div className='relative w-full h-full flex gap-2 pt-20 '>
+                                    <h1 className='text-gray-700 text-center text-3xl font-bold mask-radial-from-neutral-400 uppercase w-full'>
+                                        olha ou a instituicao nh nao tem nada a expor pra voces <br/>  ou mesmo nao estas cadastrado na instituicao nh
+                                    </h1>
+
+                                </div>
+                            )
 
                             }
 
