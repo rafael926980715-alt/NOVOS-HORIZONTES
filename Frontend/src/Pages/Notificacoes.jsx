@@ -1,49 +1,14 @@
 import '../index.css'
 import '../App.css'
 import React, { useState } from 'react'
-import { ArrowRight, MapPin, } from 'lucide-react'
+
 
 import tarefas from '../assets/gestaotarefas.webp'
 import ensino from '../assets/surprise.webp'
-import { MapPinHouse, PhoneOutgoing, MessageCircleMore, Users, Trash2 } from 'lucide-react'
+import { Trash2 , Download } from 'lucide-react'
 
 
 
-
-const ItemCard = ({ title, price }) => (
-
-    <div className='relative rounded-4xl w-full text-gray-700 flex-col h-23 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'>
-
-
-        <span className=' flex pt-1 justify-center  rounded-full px-4'>
-            <h1 className=' uppercase text-center text-xl font-bold font-mono w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
-                {title}
-            </h1>
-
-        </span>
-
-
-
-        <div className='relative top-3 w-full flex justify-between gap-2 px-2'>
-            <h1 className='text-center text-lg font-semibold font-mono uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
-                ha 3 mim
-            </h1>
-            <h1 className=' text-center text-lg font-semibold font-mono uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
-                polo 1
-            </h1>
-
-            <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70'><Trash2 className=' text-xl font-semibold font-mono uppercase' /></span>
-
-        </div>
-
-
-
-
-
-
-    </div>
-
-)
 
 
 
@@ -54,19 +19,19 @@ function Notificacions() {
     const [isLoginOpen, setIsLoginOpen] = useState(false)
 
 
-    const todosCursos =  [
-        { id: 1, titulo: "Informática de Gestão Informática de Gestão", preco: "15.000", img: tarefas , type:'Dowload' },
-        { id: 2, titulo: "Contabilidade Contabilidade",preco: "12.500", type:'Boletom'  },
-        { id: 3, titulo: "Recursos Humanos Contabilidade", preco: "12.500", type:'Message'  },
-        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", img: tarefas , type:'Event'},
-        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", type:'Event'}
+    const todosCursos = [
+        { id: 1, titulo: "Informática", preco: "15.000", img: tarefas, type: 'Dowload' },
+        { id: 2, titulo: "Contabilidade Contabilidade", preco: "12.500", type: 'Dowload' },
+        { id: 3, titulo: "Recursos Humanos Contabilidade", preco: "12.500", type: 'Message' },
+        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", img: tarefas, type: 'message' },
+        { id: 4, titulo: "Eletricidade Contabilidade", preco: "14.000", type: 'message' }
 
 
     ]
 
 
 
-
+    
 
 
 
@@ -84,12 +49,12 @@ function Notificacions() {
 
 
 
-                <div className=' flex  flex-col  items-center  gap-4 w-[100vw] h-[100vh]  '>
+                <div className='relative flex  flex-col  items-center  gap-4 w-[100vw] h-[100vh]  '>
 
 
 
 
-                    <div className='relative z-0 w-[100vw]  h-[60vh] lg:h-[50vh] flex justify-center items-center'>
+                    <div className='fixed z-0 w-[100vw]  h-[60vh] lg:h-[50vh] flex justify-center items-center'>
 
                         <img src={ensino} className='object-cover w-full h-full rounded-b-4xl shadow-lg border border-white/20' />
 
@@ -110,7 +75,7 @@ function Notificacions() {
                     </div>
 
 
-                    <div className='relative w-[100vw] h-[100vh] overflow-hidden overflow-y-auto scroll-pink'>
+                    <div className='relative w-[100vw] h-[100vh] overflow-hidden overflow-y-auto scroll-pink lg:pt-[500px] pt-[400px]  '>
 
 
                         <div className="flex flex-col gap-7 lg:grid md:grid md:grid-cols-3 lg:grid-cols-4 pt-2 pb-2">
@@ -121,18 +86,102 @@ function Notificacions() {
 
                             {todosCursos.length > 0 ? (
                                 todosCursos.map((curso) => (
-                                    <ItemCard
-                                        key={curso.id}
-                                        title={curso.titulo}
-                                        price={curso.preco}
-                                        image={curso.img}
-                                        bgColor={curso.cor}
-                                    />
+                                    <>
+                                            <div className='relative rounded-4xl w-full  text-gray-700 flex-col h-full shadow-lg transition-transform lg:hover:scale-95 duration-700 ease-in-out cursor-pointer border border-white/20 bg-black/10 backdrop-blur-md flex gap-4 px-2 py-3'>
+
+
+                                                <span className=' flex pt-1 justify-center  rounded-full px-4'>
+                                                    <h1 className='uppercase text-center text-xl font-semibold font-mono w-full'>
+                                                        {curso.titulo}
+                                                    </h1>
+                                                </span>
+
+                                                <section className='h-full w-full border border-white/20 rounded-3xl shadow-lg px-1 py-1'>
+                                                    <p className='uppercase text-center text-lg font-bold font-mono w-full'> 
+
+                                                        hoje e o dia que nos nao se quej 3dnid vamos molfdar 
+
+                                                    </p>
+                                                </section>
+
+
+
+
+
+                                                <div className='relative w-full flex justify-between gap-2'>
+                                                    <h1 className='text-center text-lg font-semibold font-mono uppercase shadow-lg   border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                                                        ha 3 mim
+                                                    </h1>
+                                                    <h1 className=' text-center text-lg font-semibold font-mono uppercase shadow-lg border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                                                        polo 1
+                                                    </h1>
+
+                                                    <span className=' pt-1 border border-white/20 rounded-full px-4 cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70'><Trash2 className=' text-xl font-semibold font-mono uppercase' /></span>
+
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+
+
+                                            {curso.type === 'Dowload' && (
+
+                                                <div className='relative rounded-4xl w-full text-gray-700 flex-col h-full shadow-lg transition-transform lg:hover:scale-95 duration-700 ease-in-out cursor-pointer border border-white/20 bg-black/10 backdrop-blur-md flex gap-4 px-2 py-3'>
+
+
+                                                <span className=' flex pt-1 justify-center  rounded-full'>
+                                                    <h1 className=' uppercase text-center text-xl font-semibold font-mono w-full'>
+                                                        {curso.titulo}
+                                                    </h1>
+
+                                                </span>
+
+
+                                                 <section className='h-full w-full border border-white/20 rounded-3xl shadow-lg flex justify-between items-center'>
+                                                 
+                                                    <p className='uppercase text-lg font-bold font-mono w-full px-2'>
+                                                        mat.pdf                                          
+                                                    </p>
+                                                     <p className='uppercase text-lg font-bold font-mono w-full'>
+                                                        1.5mg                                          
+                                                    </p>
+                                                    <span className=' pt-1 border border-white/20 rounded-full px-4 py-2 cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70'><Download className=' text-xl font-semibold font-mono uppercase' /></span>
+                                                </section>
+
+
+
+                                                <div className='relative w-full flex justify-between gap-2'>
+                                                    <h1 className='text-center text-lg font-semibold font-mono uppercase shadow-lg border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                                                        ha 3 mim
+                                                    </h1>
+                                                    <h1 className=' text-center text-lg font-semibold font-mono uppercase shadow-lg border border-white/20  px-3 py-1 rounded-full w-[400px] text-ellipsis overflow-hidden whitespace-nowrap'>
+                                                        polo 1
+                                                    </h1>
+
+                                                    <span className=' pt-1 border border-white/20 rounded-full px-4 cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70'><Trash2 className=' text-xl font-semibold font-mono uppercase' /></span>
+
+                                                </div>
+
+
+
+
+
+
+                                            </div>
+
+
+                                            )}
+                                        
+                                    </>
                                 ))
                             ) : (
                                 <div className='relative w-full h-full flex gap-2 pt-20 '>
-                                    <h1 className='text-gray-700 text-center text-3xl font-bold mask-radial-from-neutral-400 uppercase w-full'>
-                                        olha ou a instituicao nh nao tem nada a expor pra voces <br/>  ou mesmo nao estas cadastrado na instituicao nh
+                                    <h1 className='text-gray-700 text-center text-3xl font-bold audiowide-regular uppercase w-full'>
+                                        olha ou a instituicao nh nao tem nada a expor pra voces ou mesmo nao estas cadastrado na instituicao nh
                                     </h1>
 
                                 </div>

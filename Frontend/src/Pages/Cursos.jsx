@@ -6,9 +6,8 @@ import '../App.css'
 
 
 import tarefas from '../assets/gestaotarefas.webp'
-import ensino from '../assets/focused.webp'
 import React, { useState } from 'react'
-import { ArrowRight, MapPinHouse, PhoneOutgoing, MessageCircleMore, Users, Trash2 } from 'lucide-react'
+
 import { Link } from 'react-router-dom'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -26,7 +25,10 @@ import 'swiper/css/autoplay'
 
 
 const ItemCard = ({ title }) => (
+
+
     <Link
+
         to='/Inscricaonh'
         className='relative rounded-4xl audiowide-regular w-full text-gray-700 flex-col  h-45 lg:h-35 shadow-lg transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 bg-black/10 backdrop-blur-md flex'>
         <span className=' flex pt-1 justify-center  rounded-full px-4'>
@@ -45,15 +47,15 @@ const ItemCard = ({ title }) => (
             <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full '>
                 turno: tarde
             </h1>
-            </div>
-            <div className='relative top-5  gap-2 px-3 flex justify-between lg:grid lg:grid-cols-2'>
-                <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
-                    11: classe
-                </h1>
+        </div>
+        <div className='relative top-5  gap-2 px-3 flex justify-between lg:grid lg:grid-cols-2'>
+            <h1 className=' text-center text-lg font-semibold uppercase shadow-lg  backdrop-blur-md border border-white/20  px-3 py-1 rounded-full w-full'>
+                11: classe
+            </h1>
 
-                <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 text-lg shadow-lg font-semibold text-center uppercase w-full'>sala: 12</span>
-            </div>
-        
+            <span className=' pt-1  backdrop-blur-md border border-white/20 rounded-full px-4 text-lg shadow-lg font-semibold text-center uppercase w-full'>sala: 12</span>
+        </div>
+
 
 
 
@@ -68,7 +70,7 @@ function Cursos() {
 
 
     const todosCursos = [
-        { id: 1, titulo: "Informática de Gestão", cat: "Técnico Polo ||", preco: "15.000", img: tarefas },
+        { id: 1, titulo: "Informática de Gestão", cat: "Técnico Polo ||", preco: "15.000" , img: tarefas},
         { id: 2, titulo: "Contabilidade", cat: "Administração Polo |", preco: "12.500", img: tarefas },
         { id: 3, titulo: "Recursos Humanos", cat: "Gestão Polo |", preco: "12.500", img: tarefas },
         { id: 4, titulo: "Eletricidade", cat: "Técnico Polo ||", preco: "14.000", img: tarefas },
@@ -144,15 +146,24 @@ function Cursos() {
                         <div className="flex flex-col gap-5 lg:grid md:grid md:grid-cols-3 lg:grid-cols-4">
 
 
-
-                            {
+                            {todosCursos.length > 0 ? (
                                 todosCursos.map((curso) => (
                                     <ItemCard
                                         key={curso.id}
                                         title={curso.titulo}
                                         price={curso.preco}
+                                        image={curso.img}
+                                        bgColor={curso.cor}
                                     />
                                 ))
+                            ) : (
+                                <div className='relative w-full h-full flex gap-2 pt-20 '>
+                                    <h1 className='text-gray-700 text-center text-3xl font-bold audiowide-regular uppercase w-full'>
+                                        turmas indesponiveis por enquanto mas seras notificado apos turma desponivel
+                                    </h1>
+
+                                </div>
+                            )
 
                             }
 

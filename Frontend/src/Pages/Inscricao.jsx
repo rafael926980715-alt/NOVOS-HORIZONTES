@@ -1,6 +1,6 @@
 import '../index.css'
 import '../App.css'
-import { ArrowRight, MapPinHouse, PhoneOutgoing, MessageCircleMore, Bell, User, X, Lock, Mail, MapPinPen, PenLine, AudioLines, SendHorizontal, Megaphone, ArrowLeft, Image , Cake } from 'lucide-react'
+import { User, Lock ,Image , Cake } from 'lucide-react'
 
 
 
