@@ -5,6 +5,7 @@ from sqlalchemy import Integer , String , Boolean
 
 
 
+
 class Base(DeclarativeBase):
     pass
 
