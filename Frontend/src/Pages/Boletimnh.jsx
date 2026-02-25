@@ -1,6 +1,8 @@
 import '../index.css'
 import '../App.css'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' 
+import { Download } from 'lucide-react'
+
 
 
 function BoletimNH() {
@@ -19,7 +21,7 @@ function BoletimNH() {
 
                </div>
 
-               <section className='relative'> <h1 className='text-center lg:text-5xl text-3xl font-bold audiowide-regular text-gray-700 uppercase w-full h-full border border-white/20 shadow-lg rounded-full px-3 py-2'>reprovado </h1> </section>
+               <section className='relative flex gap-2'> <h1 className='text-center lg:text-5xl text-3xl font-bold audiowide-regular text-gray-700 uppercase w-full h-full border border-white/20 shadow-lg rounded-full px-3 py-2'>reprovado </h1> <span className=' border border-white/20 rounded-3xl flex items-center cursor-pointer shadow-lg duration-700 ease-in-out active:scale-70 px-3'><Download size={40} /></span></section>
 
             </div>
 

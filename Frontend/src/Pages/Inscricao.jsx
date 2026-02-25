@@ -1,6 +1,6 @@
 import '../index.css'
 import '../App.css'
-import { User, Lock ,Image , Cake } from 'lucide-react'
+import { User, Lock, Image, Cake } from 'lucide-react'
 
 
 
@@ -31,42 +31,44 @@ function InscricaoNH() {
           <div className='w-full h-full flex flex-col justify-center items-center pt-3'>
 
 
-                <h1 className='text-center text-gray-700  font-bold uppercase text-xl py-2 font-mono'> sessao de inscricao pra o aluno </h1>
+            <h1 className='text-center text-gray-700  font-bold uppercase text-xl py-2 font-mono'> sessao de inscricao pra o aluno </h1>
 
-            <form className='lg:grid lg:grid-cols-5 flex flex-col justify-center items-center w-full lg:w-[90vw] shadow-lg border border-white/20 backdrop-blur-md rounded-2xl h-full px-3 lg:gap-0 gap-5 py-3'>
+            <form className='lg:grid lg:grid-cols-5 flex flex-col justify-center items-center w-full lg:w-[90vw] shadow-lg border border-white/20 backdrop-blur-md rounded-2xl h-full px-3 lg:gap-19 gap-5 py-3'>
 
 
               <span className='relative'>
                 <User className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-gray-700" size={24} />
                 <input type="text"
                   placeholder='Seu Nome Completo'
-                  className='lg:w-[13vw] backdrop-blur-md text-gray-700 w-full
-                               placeholder:text-gray-700 px-12 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[16px] focus:outline-none uppercase
-                                                    transition shadow-lg placeholder:font-mono'/>
-              </span>
-
-
-               <span className='relative'>
-
-                <Lock className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-gray-700" size={24} />
-                <input type="password"
-                  placeholder='Cria Sua Senha'
-                  className='lg:w-[13vw] backdrop-blur-md text-gray-700 w-full
-                               placeholder:text-gray-700 px-12 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[16px] focus:outline-none uppercase
-                                                    transition shadow-lg placeholder:font-mono'/>
-              </span>
-
-               <span className='relative'>
-                <Cake className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-gray-700" size={24} />
-                <input type="date"
-                  className='lg:w-[13vw] backdrop-blur-md text-gray-700 w-full
-                               placeholder:text-gray-700 px-12 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[16px] focus:outline-none uppercase
+                  className='lg:w-[18vw] backdrop-blur-md text-gray-700 w-full
+                               placeholder:text-gray-700 px-12 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[20px] focus:outline-none uppercase
                                                     transition shadow-lg placeholder:font-mono'/>
               </span>
 
 
               <span className='relative'>
-               
+
+                <Lock className="absolute z-50 left-4 top-1/2 -translate-y-1/2 text-gray-700" size={24} />
+                <input type="password"
+                  placeholder='Cria Sua Senha'
+                  className='lg:w-[18vw] backdrop-blur-md text-gray-700 w-full
+                               placeholder:text-gray-700 px-12 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[20px] focus:outline-none uppercase
+                                                    transition shadow-lg placeholder:font-mono'/>
+              </span>
+
+              <span className='relative shadow-lg pt-3 border border-white/20 rounded-4xl w-full lg:w-[18vw]'>
+                <p className='uppercase text-center text-lg font-bold font-mono w-full text-gray-700'>
+                   escolha sua data de nascimento
+                </p>
+                <input type="date"
+                  className='lg:w-[18vw] backdrop-blur-md text-gray-700 w-full
+                               placeholder:text-gray-700 px-20 py-2 border border-white/20 rounded-4xl font-semibold font-mono  text-[19px] focus:outline-none uppercase
+                                                    transition shadow-lg placeholder:font-mono'/>
+              </span>
+
+
+              <span className='relative'>
+
               </span>
 
 

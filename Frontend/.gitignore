@@ -7,7 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+
+
 node_modules
+ADmin
+adminApp.jsx
 dist
 dist-ssr
 *.local

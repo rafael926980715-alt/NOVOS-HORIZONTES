@@ -1,7 +1,7 @@
 import '../index.css'
 
 import React, { useState } from 'react'
-import { Award, Calendar , User, Lock , SendHorizontal ,ListCheck } from 'lucide-react'
+import { Award, Calendar, User, Lock, SendHorizontal, ListCheck } from 'lucide-react'
 
 import tarefas from '../assets/gestaotarefas.webp'
 import { Link } from 'react-router-dom'
@@ -18,15 +18,34 @@ function PerfilSearch() {
 
 
   const students = {
-      id: 1,
-      name: 'João Silva',
-      course: 'Informática de Gestão',
-      turno: 'manha',
-      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
-      turma:'nfor3',
-      calender: '90/30/2009',
-      sale:'pago'
-    }
+    id: 1,
+    name: 'João Silva',
+    course: 'Informática de Gestão',
+    turno: 'manha',
+    photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop',
+    turma: 'nfor3',
+    studentsSale: [
+      {
+        id: 1,
+        calender: '90/30/2009',
+        sale: 'pago'
+      },
+      {
+        id: 2,
+        calender: '90/30/2009',
+        sale: 'pago'
+      },
+      {
+        id: 2,
+        calender: '90/30/2009',
+        sale: 'pago'
+      }
+
+    ]
+  }
+
+
+
 
 
   return (
@@ -37,7 +56,7 @@ function PerfilSearch() {
 
 
 
-        <div className="relative z-900 flex items-center justify-center p-4 sm:p-6 lg:p-8 pt-15">
+        <div className="relative z-900 flex items-center justify-center p-4 sm:p-6 lg:p-8 pt-15 ">
 
           <div className="w-full max-w-4xl pt-15">
 
@@ -54,7 +73,7 @@ function PerfilSearch() {
 
 
                 {/* Profile Card */}
-                <div className=" h-full bg-white w-[100vw] shadow-2xl relative lg:h-auto lg:w-[750px] lg:rounded-4xl overflow-hidden">
+                <div className=" h-full bg-white w-[100vw] shadow-2xl relative lg:h-auto lg:w-[750px] lg:rounded-4xl overflow-hidden overflow-y-auto scroll-pink">
 
                   {/* Top Section - Text */}
                   <div className="bg-gradient-to-br from-pink-900 to-pink-800 px-8 py-12 text-center relative">
@@ -105,27 +124,31 @@ function PerfilSearch() {
                     </div>
 
                     {/* Stats Cards */}
-                    
-                      <div className="flex items-center justify-center flex-col gap-3 mt-1">
-                        {students.sale == 'pago' && (
-                        <div className="bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 shadow-lg uppercase audiowide-regular">
+
+                    <div className=" flex gap-3 overflow-x-auto no-scrollbar mb-4 mt-6">
+                      {students.studentsSale.map((saleperfil) => (
+                        <div
+                          key={saleperfil.id}
+                          className="bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 shadow-lg uppercase audiowide-regular">
                           <Calendar className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-pink-50 flex-shrink-0" />
                           <p className="text-lg sm:text-xl lg:text-2xl font-bold text-amber-50 whitespace-nowrap w-full">
-                            {students.calender}
+                            {saleperfil.calender}
                           </p>
                           <p className="text-lg sm:text-lg lg:text-2xl font-bold text-pink-50 uppercase whitespace-nowrap w-full">
-                            {students.sale}
+                            {saleperfil.sale}
                           </p>
                         </div>
-                        )}
 
-                         <Link
-                         to='/Boletomnh'
-                         className='bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center shadow-lg gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 audiowide-regular text-lg font-semibold text-white transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 uppercase'>boletim <ListCheck className='text-white' /> </Link>
+                      ))}
 
-                      </div>
+                    </div>
 
-             
+
+                    <Link
+                      to='/Boletomnh'
+                      className='bg-gradient-to-br from-pink-800 to-pink-500 rounded-full flex items-center justify-center shadow-lg gap-3 sm:gap-5 lg:gap-7 py-2 sm:py-3 lg:py-3 px-7 sm:px-4 lg:px-4 audiowide-regular text-lg font-semibold text-white transition-transform lg:hover:scale-95 cursor-pointer border border-white/20 duration-700 ease-in-out active:scale-70 uppercase'>boletim <ListCheck className='text-white' /> </Link>
+
+
 
                   </div>
                 </div>

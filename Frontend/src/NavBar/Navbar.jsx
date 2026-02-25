@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Bell, User, PartyPopper , CalendarDays } from 'lucide-react'
+
+import { Bell, User, PartyPopper } from 'lucide-react'
 
 import '../index.css'
 import '../App.css'
@@ -9,11 +9,6 @@ import { Link } from 'react-router-dom'
 
 
 function Navbar() {
-
-  const [isEventOpen, setIsEventOpen] = useState(false)
-
-
-
 
 
   return (
@@ -37,8 +32,9 @@ function Navbar() {
           </div>
 
         </Link>
+        
 
-        <nav className="flex lg:w-[32vw] w-69  rounded-full shadow-lg justify-between items-center  border border-white/20 backdrop-blur-md lg:py-0">
+        <nav className="flex lg:w-[24vw] w-50  rounded-full shadow-lg justify-between items-center  border border-white/20 backdrop-blur-md lg:py-0">
 
 
 
@@ -57,13 +53,6 @@ function Navbar() {
             className=" flex gap-2 items-center lg:hover:scale-95   border border-white/20 text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70" title='PERFIL'>
             <PartyPopper size={25} className="sm:w-5 sm:h-5" />
             <span className="font-sans font-semibold hidden sm:inline uppercase">evento</span>
-          </Link>
-
-          <Link
-          to='/CalenProvonh' 
-            className=" flex gap-2 items-center lg:hover:scale-95   border border-white/20 text-gray-700 px-4 sm:px-5 lg:px-6 py-4 sm:py-2.5 lg:py-3 rounded-full font-bold text-sm transition-all shadow-lg cursor-pointer duration-700 ease-in-out active:scale-70" title='PERFIL'>
-            <CalendarDays size={25} className="sm:w-5 sm:h-5" />
-            <span className="font-sans font-semibold hidden sm:inline uppercase">calendario</span>
           </Link>
 
 
